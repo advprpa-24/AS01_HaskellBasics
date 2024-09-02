@@ -1,0 +1,21 @@
+cabal-version:      3.0
+name:               HaskellBasics
+version:            0.1.0.0
+author:             Daniel Kröni
+maintainer:         daniel.kroeni@fhnw.ch
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+test-suite tests
+    import:           warnings
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.17.0.0,
+        hspec ==2.11.9,
+        hspec-contrib,
+        QuickCheck,
+        HUnit
